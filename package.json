@@ -6,13 +6,14 @@
   "scripts": {
     "start:build": "tsc -w",
     "start:run": "nodemon build/index.js",
-    "start":" concurrently npm:start:*",
+    "start": " concurrently npm:start:*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/node": "^17.0.17",
     "concurrently": "^7.0.0",
     "nodemon": "^2.0.15"
   }
