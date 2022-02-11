@@ -2,7 +2,10 @@ import { CsvReader } from "./CsvReader";
 import { MatchResult } from "./MatchResult";
 import { dateStringToDate } from "./utils";
 
-export class MatchReader extends CsvReader{
+
+type MatchData = [Date, string, string, number, number, MatchResult, string];
+
+export class MatchReader extends CsvReader<MatchData>{
   mapRow(row: string[]) :MatchData {
     return [
       dateStringToDate(row[0]),
